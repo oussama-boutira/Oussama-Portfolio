@@ -4,6 +4,12 @@ import { motion } from "framer-motion";
 const About = () => {
   const education = [
     {
+      year: "Oct 2025 - Mar 2026",
+      degree: "JobInTech Certificate in Full-Stack Web Development",
+      school: "YNOV MAROC CAMPUS",
+      desc: "An intensive certification program spanning from October 2025 to March 2026, equipping participants with comprehensive full-stack web development skills and hands-on experience.",
+    },
+    {
       year: "2023 - 2025",
       degree: "specialist technician in full-stack web development",
       school: "ISTA NTUC SYBA MARRAKECH",
@@ -44,26 +50,33 @@ const About = () => {
         >
           <p
             style={{
-              fontSize: "1.1rem",
+              fontSize: "1.05rem",
               marginBottom: "1.5rem",
               color: "rgba(255,255,255,0.8)",
+              lineHeight: 1.7,
             }}
           >
-            I’m a Full-Stack Developer with a passion for building smooth and
-            efficient web applications. I enjoy learning new technologies and
-            mastering frameworks to create digital experiences that work well
-            and look good.
+            I’m a full-stack developer, and my main focus is building web
+            applications that actually make life easier for the people using
+            them. For me, it is not just about writing code—it is about making
+            sure everything looks great on the outside and runs perfectly behind
+            the scenes.
           </p>
           <p
             style={{
-              fontSize: "1.1rem",
+              fontSize: "1.05rem",
               color: "rgba(255,255,255,0.8)",
               marginBottom: "3rem",
+              lineHeight: 1.7,
             }}
           >
-            Beyond coding, I like exploring new tools, staying up-to-date with
-            tech trends, and contributing to open-source projects. My goal is to
-            build applications that are useful, reliable, and make an impact.
+            But my favorite part of the job is problem-solving. I love helping
+            businesses save hours of manual work by setting up smart automations
+            and making their different tools talk to each other. Whether that
+            means building a brand new platform from scratch or adding a bit of
+            AI to speed up your daily tasks, my goal is always the same: to
+            build software that actually solves your problems and helps your
+            business grow.
           </p>
 
           {/* Personal Info Grid */}

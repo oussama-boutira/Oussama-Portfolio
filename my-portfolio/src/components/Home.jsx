@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profilePhoto from "../assets/Oussama-Boutira.png";
+import profilePhoto from "../assets/Oussama-Boutira.webp";
 import cvFile from "../assets/CV.pdf";
 
 const Home = () => {

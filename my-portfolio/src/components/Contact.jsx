@@ -1,11 +1,20 @@
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { createPortal } from "react-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaWhatsapp, FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
+  const [popup, setPopup] = useState({ show: false, message: "", type: "" });
+
+  const showPopup = (message, type) => {
+    setPopup({ show: true, message, type });
+    setTimeout(() => {
+      setPopup({ show: false, message: "", type: "" });
+    }, 4000);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -24,21 +33,54 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           setLoading(false);
-          alert("Message sent successfully!");
+          showPopup("Message sent successfully!", "success");
           e.target.reset();
         },
         (error) => {
           console.log(error.text);
           setLoading(false);
-          alert("Failed to send message. Please try again.");
+          showPopup("Failed to send message. Please try again.", "error");
         }
       );
   };
   return (
     <div
       className="contact-container"
-      style={{ padding: "5rem 10%", textAlign: "center" }}
+      style={{ padding: "5rem 10%", textAlign: "center", position: "relative" }}
     >
+      {createPortal(
+        <AnimatePresence>
+          {popup.show && (
+            <motion.div
+              initial={{ opacity: 0, y: -50, x: "-50%" }}
+              animate={{ opacity: 1, y: 0, x: "-50%" }}
+              exit={{ opacity: 0, y: -50, x: "-50%" }}
+              style={{
+                position: "fixed",
+                top: "30px",
+                left: "50%",
+                zIndex: 10000,
+                background: popup.type === "success" ? "#2ed573" : "#ff4757",
+                color: "#fff",
+                padding: "0.8rem 1.6rem",
+                borderRadius: "50px",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.6rem",
+                boxShadow: "0 10px 25px rgba(0,0,0,0.4)",
+                fontWeight: "600",
+                fontSize: "0.95rem",
+                whiteSpace: "nowrap"
+              }}
+            >
+              {popup.type === "success" ? <FaCheckCircle size={18} /> : <FaExclamationCircle size={18} />}
+              {popup.message}
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
+
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +125,7 @@ const Contact = () => {
         >
           <input
             type="text"
-            name="user_name"
+            name="name"
             placeholder="Your Name"
             required
             style={{
@@ -98,7 +140,7 @@ const Contact = () => {
           />
           <input
             type="email"
-            name="user_email"
+            name="email"
             placeholder="Your Email"
             required
             style={{

@@ -17,7 +17,33 @@ import {
   SiMysql,
   SiPostman,
   SiCanva,
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiSupabase,
+  SiPostgresql,
+  SiN8N,
+  SiWordpress,
+  SiVite,
+  SiFirebase,
+  SiPrisma,
+  SiClerk,
+  SiVercel,
+  SiNetlify,
+  SiRailway,
 } from "react-icons/si";
+
+const OpenRouterIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    width="1em"
+    height="1em"
+  >
+    <path d="M15.4 22l-8.5-8.5a2.12 2.12 0 0 1 0-3L15.4 2l2.1 2.1-7.4 7.4 7.4 7.4L15.4 22z" />
+  </svg>
+);
 
 const Skills = () => {
   const skills = {
@@ -26,6 +52,9 @@ const Skills = () => {
       { name: "CSS3", color: "#1572B6", icon: <FaCss3Alt /> },
       { name: "JavaScript", color: "#F7DF1E", icon: <FaJs /> },
       { name: "React", color: "#61DAFB", icon: <FaReact /> },
+      { name: "Next.js", color: "#FFFFFF", icon: <SiNextdotjs /> },
+      { name: "TypeScript", color: "#3178C6", icon: <SiTypescript /> },
+      { name: "Tailwind CSS", color: "#06B6D4", icon: <SiTailwindcss /> },
     ],
     Backend: [
       { name: "Node.js", color: "#339933", icon: <FaNodeJs /> },
@@ -34,12 +63,24 @@ const Skills = () => {
       { name: "Laravel", color: "#FF2D20", icon: <FaLaravel /> },
       { name: "MongoDB", color: "#47A248", icon: <SiMongodb /> },
       { name: "MySQL", color: "#4479A1", icon: <SiMysql /> },
+      { name: "PostgreSQL", color: "#4169E1", icon: <SiPostgresql /> },
+      { name: "Supabase", color: "#3ECF8E", icon: <SiSupabase /> },
+      { name: "Firebase", color: "#FFCA28", icon: <SiFirebase /> },
+      { name: "Prisma", color: "#2D3748", icon: <SiPrisma /> },
     ],
     Tools: [
       { name: "Git", color: "#F05032", icon: <FaGitAlt /> },
       { name: "GitHub", color: "#181717", icon: <FaGithub /> },
       { name: "Postman", color: "#FF6C37", icon: <SiPostman /> },
       { name: "Canva", color: "#00C4CC", icon: <SiCanva /> },
+      { name: "n8n", color: "#EA4B71", icon: <SiN8N /> },
+      { name: "WordPress", color: "#21759B", icon: <SiWordpress /> },
+      { name: "Vite", color: "#646CFF", icon: <SiVite /> },
+      { name: "Clerk", color: "#6C47FF", icon: <SiClerk /> },
+      { name: "OpenRouter", color: "#8E9EBA", icon: <OpenRouterIcon /> },
+      { name: "Vercel", color: "#FFFFFF", icon: <SiVercel /> },
+      { name: "Netlify", color: "#00C7B7", icon: <SiNetlify /> },
+      { name: "Railway", color: "#FFFFFF", icon: <SiRailway /> },
     ],
   };
 

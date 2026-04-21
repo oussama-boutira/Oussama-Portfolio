@@ -6,17 +6,18 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Scene from "./components/canvas/Scene";
+import SceneWrapper from "./components/SceneWrapper";
 import Loader from "./components/Loader";
+import WhatsAppWidget from "./components/WhatsAppWidget";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   useEffect(() => {
-    // Simulate loading time
+    // Quick visual transition — no artificial delay
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 300);
 
     return () => clearTimeout(timer);
   }, []);
@@ -52,7 +53,7 @@ function App() {
 
   return (
     <div className="app-root">
-      <Scene />
+      <SceneWrapper />
       <Navbar />
       <main>
         <section id="home">
@@ -78,6 +79,7 @@ function App() {
       <footer className="footer">
         © {new Date().getFullYear()} Oussama Boutira — Built with React + Vite
       </footer>
+      <WhatsAppWidget />
     </div>
   );
 }
