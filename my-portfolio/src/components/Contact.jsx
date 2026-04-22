@@ -198,11 +198,12 @@ const Contact = () => {
           gap: "2rem",
         }}
       >
-        {/* Add social icons here */}
+        {/* Social Links with aria-labels for accessibility */}
         <a
           href="https://www.linkedin.com/in/oussama-boutira-04333739a/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit my LinkedIn Profile"
           style={{ color: "#fff", fontSize: "2rem", transition: "color 0.3s" }}
           onMouseOver={(e) => (e.currentTarget.style.color = "#0077b5")}
           onMouseOut={(e) => (e.currentTarget.style.color = "#fff")}
@@ -213,6 +214,7 @@ const Contact = () => {
           href="https://github.com/oussama-boutira"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit my GitHub Profile"
           style={{ color: "#fff", fontSize: "2rem", transition: "color 0.3s" }}
           onMouseOver={(e) => (e.currentTarget.style.color = "#333")}
           onMouseOut={(e) => (e.currentTarget.style.color = "#fff")}
@@ -223,6 +225,7 @@ const Contact = () => {
           href="https://wa.me/212616150329"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Chat with me on WhatsApp"
           style={{ color: "#fff", fontSize: "2rem", transition: "color 0.3s" }}
           onMouseOver={(e) => (e.currentTarget.style.color = "#25D366")}
           onMouseOut={(e) => (e.currentTarget.style.color = "#fff")}

@@ -56,7 +56,7 @@ const About = () => {
               lineHeight: 1.7,
             }}
           >
-            I’m a full-stack developer, and my main focus is building web
+            I'm a full-stack developer, and my main focus is building web
             applications that actually make life easier for the people using
             them. For me, it is not just about writing code—it is about making
             sure everything looks great on the outside and runs perfectly behind

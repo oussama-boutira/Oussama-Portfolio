@@ -553,6 +553,7 @@ const SimpleProjectCard = ({ project, index }) => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`View live demo of ${project.title}`}
               whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
               whileTap={{ scale: 0.95 }}
               style={{
@@ -575,6 +576,7 @@ const SimpleProjectCard = ({ project, index }) => {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`View source code for ${project.title} on GitHub`}
               whileHover={{
                 scale: 1.05,
                 background: "rgba(255, 255, 255, 0.12)",
